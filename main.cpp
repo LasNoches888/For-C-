@@ -10,11 +10,18 @@ void readfromfile(vector<string>& lines) {
 }
 
 void printlines(const vector<string>& lines) {
-
+    for (const auto& line:lines) {
+        cout << line << endl;
+    }
 }
 
 void writetowile(const vector<string>& lines) {
-
+    ofstream out;
+    out.open("file2.txt");
+    for (const auto& line : lines){
+        out << line << endl;
+    }
+    out.close();
 }
 
 int main() {
